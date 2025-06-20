@@ -79,12 +79,12 @@ public void the_user_opens_the_website() {
 @Then("user should see the welcome message")
 	public void user_should_see_the_welcome_message() {
 	
-		String msg= driver.findElement(By.xpath("(//*[contains(text(), 'My Account')])[1]")).getText();
-		
+		//String msg= driver.findElement(By.xpath("(//*[contains(text(), 'My Account')])[1]")).getText();
+		String msg= driver.findElement(By.xpath("//*[@id=\"content\"]/h2[1]")).getText();
 		
 		Assert.assertTrue(msg, true);
-		
-		System.out.println("Test passed!\n"+ msg);
+	
+	System.out.println("Test passed!\n"+ msg);
 	
 	}
 	

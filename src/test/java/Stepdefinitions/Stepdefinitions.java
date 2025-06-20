@@ -58,6 +58,7 @@ public void the_user_opens_the_website() {
 	driver=new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
+	System.out.println("Step 1");
 }
 		
 @When("the user enters username {string} and password {string}")

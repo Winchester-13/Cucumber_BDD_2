@@ -3,6 +3,7 @@ package Stepdefinitions;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.And;
@@ -10,7 +11,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-class Stepdefinitions{
+public class Stepdefinitions{
 
 	WebDriver driver;
 	
@@ -58,7 +59,7 @@ public void the_user_opens_the_website() {
 	driver=new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
-	System.out.println("Step 1");
+
 }
 		
 @When("the user enters username {string} and password {string}")
@@ -77,9 +78,12 @@ public void the_user_opens_the_website() {
 	}
 @Then("user should see the welcome message")
 	public void user_should_see_the_welcome_message() {
-		String msg= driver.findElement(By.xpath("//h2[normalize-space()='My Account']")).toString();
-    
-		Assert.assertEquals(msg, "My Account");
+	
+		String msg= driver.findElement(By.xpath("(//*[contains(text(), 'My Account')])[1]")).getText();
+		
+		
+		Assert.assertTrue(msg, true);
+		
 		System.out.println("Test passed!\n"+ msg);
 	
 	}

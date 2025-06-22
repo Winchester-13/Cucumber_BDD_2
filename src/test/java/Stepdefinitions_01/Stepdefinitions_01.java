@@ -1,4 +1,4 @@
-package Stepdefinitions;
+package Stepdefinitions_01;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -11,7 +11,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Stepdefinitions{
+public class Stepdefinitions_01{
 
 	WebDriver driver;
 	

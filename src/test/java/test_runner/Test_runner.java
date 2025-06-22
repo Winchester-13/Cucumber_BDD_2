@@ -6,16 +6,17 @@ import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
-@RunWith(Cucumber.class)
+@RunWith (Cucumber.class)
 @CucumberOptions(
 		
-		features={".//feature/login.feature"}, 
-		glue={"Stepdefinitions"}
+		features=".//feature/Multiple_login.feature",
+		glue= {"Stepdefinitions_02"}
+		
 		)
 
 
 		
-		
-public class Test_runner {
 
+class Test_runner{
+	
 }

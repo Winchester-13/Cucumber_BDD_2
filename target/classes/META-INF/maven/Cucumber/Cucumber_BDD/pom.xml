@@ -34,13 +34,19 @@
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/selenium-cucumber/selenium-cucumber-java -->
-
+<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.17.0</version>
+</dependency>
 <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-java</artifactId>
     <version>7.23.0</version>
     <scope>test</scope>
 </dependency>
+<!-- https://mvnrepository.com/artifact/random-string/random-string -->
 
 
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
@@ -50,6 +56,7 @@
     <version>7.23.0</version>
     <scope>test</scope>
 </dependency>
+
 
   </dependencies>
 </project>

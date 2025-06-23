@@ -1,8 +1,13 @@
 package Stepdefinitions_02;
+import java.time.Duration;
 import java.util.Map;
+import Hooks.Hooks;
+import PageObj.Pageobject;
 
 import org.junit.Assert;
-
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import PageObj.Pageobject;
 import Base_class.Base_class;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,13 +15,19 @@ import io.cucumber.java.en.When;
 
 public class Stepdefinitions_02 extends Base_class {
 
-	
-	Base_class base=new Base_class();
-	
-	@Given( "the user navigates to the website")
-	public void openSite() {
+	Pageobject pg;
+	WebDriver driver;
 		
-		base.setUp();
+	@Given( "the user navigates to the website and clicks on My Account and My Register buttons")
+	
+	public void openSite () {
+	
+		//Base_class.myAccount();
+		//Base_class.register();
+		//driver=new ChromeDriver();
+		pg=new Pageobject(Hooks.driver);
+
+		
 	}
 	
 	@When("the user provides the following data")
@@ -24,34 +35,36 @@ public class Stepdefinitions_02 extends Base_class {
 	 
 		Map<String, String> Mapdata=dataTable.asMap(String.class, String.class);
 		
-		base.firstName(Mapdata.get("firstName"));
-		base.lastName(Mapdata.get("lastName"));
-		base.email(base.randomMail()+"@gmail.com");
-		base.tele(base.randomNumber());
-		base.password(Mapdata.get("Password"));
-		base.cnfpassword(Mapdata.get("Password"));		
+		pg.firstName(Mapdata.get("firstName"));
+		pg.lastName(Mapdata.get("lastName"));
+		pg.email(pg.randomMail()+"@gmail.com");
+		pg.tele(pg.randomNumber());
+		pg.password(Mapdata.get("Password"));
+		pg.cnfpassword(Mapdata.get("Password"));		
 		
 	}
 
 	@When("the user clicks on the privacy policy checkbox")
 	public void the_user_clicks_on_the_privacy_policy_checkbox() {
 		
-		base.chkbox();
+		pg.chkbox();
 		
 	}
 
 	@When("the user clicks the Continue button")
 	public void the_user_clicks_the_continue_button() {
 		
-		base.continuebtn();
+		pg.continuebtn();
 
 	}
 
 	@Then("the user should see the registration successful message")
 	public void the_user_should_see_the_registration_successful_message() {
 		
-		Assert.assertTrue(base.text(), true);
-		System.out.println(base.text());
+		Assert.assertTrue(pg.text(),true);
+		System.out.println(pg.text());
 	}
+	
+
 	
 }

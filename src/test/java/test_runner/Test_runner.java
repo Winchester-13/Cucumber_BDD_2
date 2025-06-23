@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		
 		features=".//feature/Multiple_login.feature",
-		glue= {"Stepdefinitions_02"}
+		glue= {"Stepdefinitions_02", "Hooks"}
 		
 		)
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="5.799" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-06-27T05:21:03.378552Z">
+<testcase classname="Data driven BDD" name="User registration" time="5.732">
+<system-out><![CDATA[
+Given the user navigates to the website and clicks on My Account and My Register buttons.passed
+When the user provides the following data...................................passed
+When the user clicks on the privacy policy checkbox.........................passed
+When the user clicks the Continue button....................................passed
+Then the user should see the registration successful message................passed
+]]></system-out>
+</testcase>
+</testsuite>

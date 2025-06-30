@@ -25,7 +25,7 @@ public class Stepdefinitions_02 extends Base_class {
 		//Base_class.myAccount();
 		//Base_class.register();
 		//driver=new ChromeDriver();
-		pg=new Pageobject(Hooks.driver);
+		pg=new Pageobject(driver);
 
 		
 	}

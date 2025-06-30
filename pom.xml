@@ -32,7 +32,16 @@
     <artifactId>selenium-java</artifactId>
     <version>4.33.0</version>
 </dependency>
-
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.2</version>
+</dependency>
+<dependency>
+    <groupId>tech.grasshopper</groupId>
+    <artifactId>extentreports-cucumber6-adapter</artifactId>
+    <version>2.10.0</version>
+</dependency>
 <!-- https://mvnrepository.com/artifact/selenium-cucumber/selenium-cucumber-java -->
 <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 <dependency>
@@ -46,6 +55,8 @@
     <version>7.23.0</version>
     <scope>test</scope>
 </dependency>
+
+
 <!-- https://mvnrepository.com/artifact/random-string/random-string -->
 
 
@@ -57,6 +68,19 @@
     <scope>test</scope>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/io.cucumber/messages -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>messages</artifactId>
+    <version>27.2.0</version>
+</dependency>
+
+    <dependency>
+        <groupId>com.google.protobuf</groupId>
+        <artifactId>protobuf-java</artifactId>
+        <version>3.24.4</version>
+        <scope>test</scope>
+    </dependency>
 
   </dependencies>
 </project>

@@ -14,7 +14,7 @@ import io.cucumber.java.Before;
 
 public class Hooks{
 	
-	//WebDriver driver;
+	WebDriver driver;
 	
 	Properties p;
 	
@@ -36,11 +36,11 @@ public class Hooks{
 		
 		}
 	
-	/*@After
+	@After
 	public void tearDown() {
 		
-		driver.quit();
-	}*/
+		Base_class.driver.quit();
+	}
 	
 	
 

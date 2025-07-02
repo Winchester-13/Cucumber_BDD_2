@@ -9,10 +9,10 @@ Feature: Trying Scenario outline
     
     Examples:
     	
-    	|	email 						| password   |
+    	|email 						  |		password   |
     	|first1@name1.com		| qwertyuiop |
     	|first@name.com			|	qwertyuiop |
-    
+    	|first@name.com			|	qwertyuiop |
 		
 		
 		
